@@ -1,20 +1,33 @@
 body {
 	margin: 0;
-	position: relative;
+	position: fixed;
+	overflow: none;
+	font-family: helvetica;
 }
 div.container
 	{
+		display: block;
 		width: 100%;
-		margin:-16em 0 0 0;
-		position: absolute;
+		margin: 20px auto;
 		top:50%;
 		height: 5em;
 
 	}
-div.row {
+.row, .header {
+	width: 512px;
 	display: block;
-	max-width: 512px;
 	margin: auto;
+	text-align: center;
+
+}
+.header {
+		display: inline;
+}
+
+
+.fixed {
+	position: fixed;
+	top: 0;
 }
 
 div.square{
@@ -22,8 +35,80 @@ div.square{
 	width:30px;
 	height:30px;
 	border:0; 
-	border-color:black;
 	background-color: red;
 	margin: 1px;
 
+}
+button, input {
+	border:none;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+input {
+	padding: 10px 15px;
+	margin-right: 30px;
+	line-height: 1;
+	font-size: 18px;
+}
+.white{
+	color: #4CAF50;
+	background: #fff;
+	font-size: 11px;
+	padding: 14px 28px;
+	float: right;
+	margin: 0 20px; 
+}
+
+.green {
+	float: left;
+	border:none;
+	color:white;
+	margin: 20px 0;
+	padding: 14px 28px;
+	background-color: #4CAF50;
+	font-family: helvetica;
+	font-size: 11px;
+
+}
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	overflow: auto;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.4);
+}
+
+.input-div {
+	width: 40%;
+	margin: 120px auto;
+	color: white;
+	text-transform: uppercase;
+	background-color: rgba(76, 175, 82,0.8);
+	padding: 40px;
+	font-family: helvetica;
+	font-size: 11px;
+}
+#inputs{
+	display: inline-block;
+	margin: auto;
+}
+.hidden {
+	display: none;
+}
+.close{
+	position: relative;
+	top: -30px ;
+	right: -30px;
+	float:right;
+	font-weight: bold;
+	font-size: 24px;
+	margin-top:-6px;
+}
+.close:hover {
+	color: #ccc;
+	cursor: pointer;
 }
